@@ -22,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void loadImage(View view){
         String url = "http://p1.pstatp.com/large/166200019850062839d3";
-        Glide.with(this).load(url).placeholder(R.mipmap.ic_launcher).diskCacheStrategy(DiskCacheStrategy.NONE).into(ivPhoto);
+        String url1 = "http://pic.58pic.com/58pic/14/27/45/71r58PICmDM_1024.jpg";
+        String url2 = "http://112.45.159.251:9001//resources/upload_Images/phone/51390754f90543eb985eadce9566cd73.jpg";
+        Glide.with(this).load(url2).placeholder(R.drawable.loading_image).
+                error(R.drawable.error_image).
+                diskCacheStrategy(DiskCacheStrategy.ALL).into(ivPhoto);
     }
 }
